@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="emailChecker">
+<head>
+  <meta charset="utf-8" />
+  <title>Exercice bonus ANGULARJS</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="validityController">
+  <form name="emailChecker" ng-submit="validityController.addMailAddr">
+    <label>Email:
+      <input type="email" name="input" ng-model="email" required value="mail@test.fr">
+    </label>
+    <div ng-show="emailChecker.input.$error.required" ng-class="{'inputFail':true}">
+      Ce champ est requis!
+    </div>
+    <div ng-show="emailChecker.input.$error.email" ng-class="{'inputFail':true}">
+      Votre saisie est incorrecte!
+    </div>
+    <div ng-show="emailChecker.input.$valid" ng-class="{'inputGood':true}">
+      Votre saisie est correcte!
+    </div>
+  </form>
+  <script>
+  angular.module('emailChecker', [])
+  .controller('validityController', ['$scope', function($scope){
+  }]);
+</script>
+</body>
+</html>
