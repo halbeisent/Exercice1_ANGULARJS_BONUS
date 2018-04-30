@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="fr" ng-app="emailChecker">
+<html lang="fr" ng-app>
 <head>
   <meta charset="utf-8" />
   <title>Exercice bonus ANGULARJS</title>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body ng-controller="validityController">
-  <form name="emailChecker" ng-submit="validityController.addMailAddr">
+<body>
+  <form name="emailChecker">
     <label>Email:
       <input type="email" name="input" ng-model="email" required value="mail@test.fr">
     </label>
@@ -21,10 +21,5 @@
       Votre saisie est correcte!
     </div>
   </form>
-  <script>
-  angular.module('emailChecker', [])
-  .controller('validityController', ['$scope', function($scope){
-  }]);
-</script>
 </body>
 </html>

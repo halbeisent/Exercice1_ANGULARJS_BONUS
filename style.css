@@ -1,7 +1,9 @@
 .inputFail {
   background-color: red;
+  color: white;
 }
 
 .inputGood {
   background-color: green;
+  color: white;
 }
